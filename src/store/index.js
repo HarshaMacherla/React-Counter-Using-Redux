@@ -12,24 +12,14 @@ const counterReducer = (state, action) => {
         counter: state.counter - 1,
       };
 
-    case "INCREMENTBY2":
+    case "INCREASE":
       return {
-        counter: state.counter + 2,
+        counter: state.counter + action.value,
       };
 
-    case "DECREMENTBY2":
+    case "DECREASE":
       return {
-        counter: state.counter - 2,
-      };
-
-    case "INCREMENTBY5":
-      return {
-        counter: state.counter + 5,
-      };
-
-    case "DECREMENTBY5":
-      return {
-        counter: state.counter - 5,
+        counter: state.counter - action.value,
       };
 
     default:
