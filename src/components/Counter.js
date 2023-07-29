@@ -24,6 +24,14 @@ const Counter = () => {
     dispatch({ type: "DECREMENTBY2" });
   };
 
+  const handleIncrementByFive = () => {
+    dispatch({ type: "INCREMENTBY5" });
+  };
+
+  const handleDecrementByFive = () => {
+    dispatch({ type: "DECREMENTBY5" });
+  };
+
   const toggleCounterHandler = () => {
     setShowCounterValue((prev) => !prev);
   };
@@ -40,6 +48,8 @@ const Counter = () => {
         <button onClick={handleDecrement}>Decrement</button>
         <button onClick={handleIncrementByTwo}>Increment By 2</button>
         <button onClick={handleDecrementByTwo}>Decrement By 2</button>
+        <button onClick={handleIncrementByFive}>Increment By 5</button>
+        <button onClick={handleDecrementByFive}>Decrement By 5</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
